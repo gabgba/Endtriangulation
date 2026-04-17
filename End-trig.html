@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href="end.css">
+        <link rel="icon" type="favicon" href="eye.ico">
+    </head>
+    <body>
+        <header>
+            <h1>Stronghold Triangulation Calculator</h1>
+            <p>From A and B to C, Using a Triangle!</p>
+        </header>
+        <nav>
+            <a href="end-trig.html">Calculator</a>
+            <a href="know.html">Acknowledgement</a>
+        </nav>
+        <div class="container">
+            <section>
+                <h1>What is Triangulation?</h1>
+                <p style="size: 30px;">Trangulation is a method of calculating where a point is using different points and angles.<br> <br>
+                    This website is used for stronghold triangulation, a method used, in speedrunning,<br> to find the stronghold in Minecraft. 
+                </p>
+            </section>
+            <section>
+                <h1>How it Works</h1>
+                <p style="size: 30px;">
+                    The Eye of Ender only shows you what direction the stronghold is. By using your x and z coordiantes in the game or by just being precise, you could calculate where the stronghold is in your world with just two Eyes of Ender.
+                </p>
+            </section>
+            <section>
+                <h1>The Calculator</h1>
+                <p style="size: 30px;">Just throw your Eye of Ender, mark the direction it went, run perpendicularly away from that direction then, throw your Eye of Ender, mark the direction again, and put the information into the calculator to see how far away you are for that point!</p>
+            </section>
+
+        </div>
+        
+        <div>
+            <input type="number" id="sideinput" placeholder="Side(si)"><br>
+            <input type="number" id="angle1" placeholder="Angle 1(d1)"><br>
+            <input type="number" id="angle2" placeholder="Angle 2(d2)"><br>
+            <button onclick="calculate()">Calculate</button>
+            <h2 id="result"></h2>
+        </div>
+        <footer>
+            Not Affiliated with Mojang AB
+        </footer>
+
+        <script>
+            function triangulate(sideinput, angle1, angle2) {
+            return sideinput / Math.sin((angle1 - angle2) * Math.PI / 180);
+            }
+
+            function calculate() {
+            const sideinput = parseFloat(document.getElementById("sideinput").value);
+            const angle1 = parseFloat(document.getElementById("angle1").value);
+            const angle2 = parseFloat(document.getElementById("angle2").value);
+
+            const distance = triangulate(sideinput, angle1, angle2);
+            document.getElementById("result").textContent = "The distance between you and the stronghold is " + distance.toFixed(2);
+            }
+        </script>
+
+    </body>
+
+</html>

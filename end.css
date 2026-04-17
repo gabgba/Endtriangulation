@@ -1,0 +1,76 @@
+/*The Font*/
+@font-face {
+    font-family: Mojangles;
+    src: url(Minecraft.woff);
+}
+/*The Not Font*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #0c0d0b;
+    color: #f0f0f0;
+    font-family: Mojangles;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+nav {
+    background-color: #0c0d0b;
+    text-align: center;
+    font-family: Mojangles;
+    size: 50px;
+    padding: 15px;
+}
+
+body {
+    background-color: #100c08;
+}
+
+div{
+    color: #f0f0f0;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 0px;
+    font-family: Mojangles;
+}
+
+h1 {
+    padding: 10px;
+    padding-left: 0px;
+}
+
+h2 {
+    padding: 10px;
+    padding-left: 20px
+}
+
+input {
+    color: #f0f0f0;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 0px;
+    background-color: #0c0d0b;
+    font-family: Mojangles;
+}
+button{
+    color: #f0f0f0;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 0px;
+    background-color: #0c0d0b;
+    font-family: Mojangles;
+ }
+
+footer{
+    text-align: center;
+    background-color:#212121;
+    color: #f0f0f0;
+    padding:10px;
+    font-family: Mojangles;
+    font-size:20px;
+}
